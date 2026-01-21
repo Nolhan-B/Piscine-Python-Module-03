@@ -1,5 +1,6 @@
 import sys
 
+
 def main() -> None:
     print("=== Command Quest ===\n")
 
@@ -9,7 +10,7 @@ def main() -> None:
     if (has_argument is False):
         print("No arguments provided!")
 
-    print("Program name: ", sys.argv[0]) 
+    print("Program name: ", sys.argv[0])
 
     if (has_argument is True):
         print(f"Arguments received: {len_sys - 1}")
@@ -19,6 +20,7 @@ def main() -> None:
             i += 1
 
     print(f"Total arguments: {len_sys}\n")
-        
+
+
 if __name__ == "__main__":
     main()
