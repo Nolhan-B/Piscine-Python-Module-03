@@ -27,6 +27,7 @@ def event_generator(n: int) -> list[int | list[str | int]]:
             "player": players[i % 3]
         }
 
+
 def fibo(n: int) -> int:
     a = 0
     b = 1
@@ -34,6 +35,7 @@ def fibo(n: int) -> int:
     for _ in range(n):
         yield a
         a, b = b, a + b
+
 
 def prime(n: int):
     nb = 2
@@ -79,7 +81,7 @@ def main() -> None:
     total_lvl = 0
     for player in players:
         if (player["level"] >= 10):
-            total_lvl += 1 
+            total_lvl += 1
     print(f"High-level players (10+) : {total_lvl}")
     print(f"Treasure events: {event_type[1]["count"]}")
     print(f"Level-up events: {event_type[2]["count"]}\n")
@@ -109,6 +111,7 @@ def main() -> None:
         else:
             prime_str += f"{number}, "
     print(prime_str)
+
 
 if __name__ == "__main__":
     main()
