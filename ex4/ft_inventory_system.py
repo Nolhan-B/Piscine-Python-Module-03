@@ -82,8 +82,8 @@ def main() -> None:
     print(f"Least Abundant: {least_abd} "
           f"({inventory[least_abd].get("quantity")} units)\n")
 
-    moderate: dict = dict()
-    scarce: dict = dict()
+    moderate = dict()
+    scarce = dict()
 
     for key, value in inventory.items():
         match (value.get("category")):
