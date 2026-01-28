@@ -13,7 +13,12 @@ def main() -> None:
     else:
         arr: list[int] = []
         for e in sys.argv[1:]:
-            arr.append(int(e))
+            is_digit = True
+            for d in e:
+                if d not in "0123456789":
+                    is_digit = False
+            if is_digit is True:
+                arr.append(int(e))
 
         len_arr: int = len(arr)
         sum_arr: int = sum(arr)
