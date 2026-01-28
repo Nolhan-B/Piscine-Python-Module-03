@@ -22,7 +22,7 @@ def main() -> None:
         print(f"Scores processed: {arr}")
         print(f"Total players: {len_arr}")
         print(f"Total score: {sum_arr}")
-        print(f"Average score: {sum_arr/len_arr}")
+        print(f"Average score: {sum_arr/len_arr:.2f}")
         print(f"High score: {max_arr}")
         print(f"Low score: {min_arr}")
         print(f"Score range: {max_arr - min_arr}\n")
