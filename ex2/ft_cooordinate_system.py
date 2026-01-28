@@ -36,7 +36,7 @@ def main() -> None:
         parse_value: str = sys.argv[1]
         value_pos: tuple = parse_pos(parse_value)
     except (Exception, ValueError) as e:
-        print(f"[ERROR] : {e}")
+        print(f"[ERROR] : {e}, Params should be: \"<xvalue>,<yvalue,<zvalue>\"")
         parse_value: str = "3,4,0"
         print(f"Now using : \"{parse_value}\" as default value.\n")
     value_pos: tuple = parse_pos(parse_value)
