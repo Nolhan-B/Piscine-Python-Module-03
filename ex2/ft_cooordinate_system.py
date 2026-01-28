@@ -34,10 +34,13 @@ def main() -> None:
     print(f"Distance between {pos_0} and {pos_1}: {distance:.2f}\n")
     try:
         parse_value: str = sys.argv[1]
-    except Exception:
+        value_pos: tuple = parse_pos(parse_value)
+    except (Exception, ValueError) as e:
+        print(f"[ERROR] : {e}")
         parse_value: str = "3,4,0"
-    print(f"Parsing coordinates: \"{parse_value}\"")
+        print(f"Now using : \"{parse_value}\" as default value.\n")
     value_pos: tuple = parse_pos(parse_value)
+    print(f"Parsing coordinates: \"{parse_value}\"")
     print(f"Position Parsed: {value_pos}")
 
     x2, y2, z2 = value_pos
