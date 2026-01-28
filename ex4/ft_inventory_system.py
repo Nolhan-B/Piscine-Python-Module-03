@@ -41,12 +41,18 @@ def main() -> None:
 
     for arg in sys.argv[1:]:
         name, quantity = arg.split(':')
-        inventory.update({
-            name: {
-                "quantity": int(quantity),
-                "category": "Scarce" if int(quantity) <= 4 else "Moderate"
-            }
-        })
+        is_digit = True
+        for d in quantity:
+            if d not in "0123456789":
+                is_digit = False
+                break
+        if is_digit is True:
+            inventory.update({
+                name: {
+                    "quantity": int(quantity),
+                    "category": "Scarce" if int(quantity) <= 4 else "Moderate"
+                }
+            })
 
     total_items = 0
     for value in inventory.values():
