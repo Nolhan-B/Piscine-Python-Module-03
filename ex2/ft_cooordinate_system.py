@@ -62,8 +62,8 @@ def main() -> None:
         print(f"Error details - Type: ValueError, Args: {e.args}\n")
 
     print("Unpacking demonstration:")
-    print(f"Player at x={x2}, y={y2}, z={z2}")
-    print(f"Coordinates: X={value_pos[0]}, Y={value_pos[1]}, Z={value_pos[2]}")
+    print(f"Player at x={value_pos[0]}, y={value_pos[1]}, z={value_pos[2]}")
+    print(f"Coordinates: X={x2}, Y={y2}, Z={z2}")
 
 
 if __name__ == "__main__":
